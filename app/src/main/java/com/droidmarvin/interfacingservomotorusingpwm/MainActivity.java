@@ -25,6 +25,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupServo();
+        setTimer();
     }
 
     // close the servo when finished to release resources
