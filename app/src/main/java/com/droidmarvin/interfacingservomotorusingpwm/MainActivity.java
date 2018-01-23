@@ -37,4 +37,17 @@ public class MainActivity extends Activity {
             Log.e(TAG, "error creating Servo", e);
         }
     }
+
+    // close servo method
+    private void destroyServo() {
+        if (mServoPwm != null) {
+            try {
+                mServoPwm.close();
+            } catch (IOException e) {
+                Log.e(TAG, "Error closing Servo");
+            } finally {
+                mServoPwm = null;
+            }
+        }
+    }
 }
