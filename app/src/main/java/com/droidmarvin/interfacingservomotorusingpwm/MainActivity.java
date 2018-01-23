@@ -33,7 +33,6 @@ public class MainActivity extends Activity {
         destroyServo();
     }
 
-
     // access the servo
     private void setupServo (){
         try {
@@ -43,6 +42,33 @@ public class MainActivity extends Activity {
             mServoPwm.setPwmFrequencyHz(50);
         }catch (IOException e){
             Log.e(TAG, "error creating Servo", e);
+        }
+    }
+
+    // turn servo motors to it's new positions
+    private void turn0Degree() {
+        try {
+            mServoPwm.setPwmDutyCycle(2.5);
+            mServoPwm.setEnabled(true);
+            Log.e(TAG,"Swing0");
+        } catch (IOException e) {
+            // error setting servo
+        }
+    }
+    private void turn90Degree() {
+        try {
+            mServoPwm.setPwmDutyCycle(7.5);
+            Log.e(TAG,"Swing90");
+        } catch (IOException e) {
+            // error setting servo
+        }
+    }
+    private void turn180Degree() {
+        try {
+            mServoPwm.setPwmDutyCycle(12.5);
+            Log.e(TAG,"Swing180");
+        } catch (IOException e) {
+            // error setting servo
         }
     }
 
