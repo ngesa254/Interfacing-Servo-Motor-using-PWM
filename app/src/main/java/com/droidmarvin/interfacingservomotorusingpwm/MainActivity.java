@@ -9,6 +9,7 @@ import com.google.android.things.pio.Pwm;
 
 import java.io.IOException;
 import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends Activity {
 
@@ -31,6 +32,17 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         destroyServo();
+    }
+
+    // create timer method
+    private void setTimer (){
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                nextMove();
+            }
+        }, 0, 3000);
     }
 
     // access the servo
