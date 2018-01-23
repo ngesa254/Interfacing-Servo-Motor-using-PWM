@@ -21,3 +21,4 @@ Please feel free to contact me if you have any questions, ideas or even if you j
 - [Github](https://github.com/ngesa254)
 - [Medium](https://medium.com/@ngesa254)
 - [Facebook](https://web.facebook.com/marvinngesa)
+- [LinkedIn](https://www.linkedin.com/in/engngesamarvin) 
