@@ -45,6 +45,21 @@ public class MainActivity extends Activity {
         }
     }
 
+    private void nextMove() {
+        switch (i % 3) {
+            case 0:
+                turn0Degree();
+                break;
+            case 1:
+                turn90Degree();
+                break;
+            case 2:
+                turn180Degree();
+                break;
+        }
+        i++;
+    }
+
     // turn servo motors to it's new positions
     private void turn0Degree() {
         try {
