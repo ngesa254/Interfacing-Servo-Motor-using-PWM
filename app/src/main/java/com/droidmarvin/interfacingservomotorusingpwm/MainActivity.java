@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
         try {
             PeripheralManagerService service = new PeripheralManagerService();
             mServoPwm = service.openPwm(PWM_SERVO_BUS);
+
+            mServoPwm.setPwmFrequencyHz(50);
         }catch (IOException e){
             Log.e(TAG, "error creating Servo", e);
         }
